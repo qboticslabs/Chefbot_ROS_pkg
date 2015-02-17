@@ -1,0 +1,10 @@
+<launch>
+  <!-- turtlebot_teleop_key already has its own built in velocity smoother -->
+  <node pkg="launchpad_robot_bringup" type="launchpad_robot_teleop_key" name="arlobot_teleop_keyboard"  output="screen">
+<!-- I am pretty sure these are no longer used
+    <param name="scale_linear" value="0.5" type="double"/>
+    <param name="scale_angular" value="1.5" type="double"/>
+-->
+   <!-- <remap from="arlobot_teleop_keyboard/cmd_vel" to="cmd_vel_mux/input/teleop"/> -->
+  </node>
+</launch>
