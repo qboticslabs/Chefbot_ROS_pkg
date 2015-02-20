@@ -126,8 +126,8 @@
 
 
 
-
 <!--
+
 
 	  <link name="left_axle_link">
 	    <inertial>
@@ -215,11 +215,9 @@
 	    </collision>
 	  </link>
 
-        <!-- Fixed because we never rotate it anyway, it is just for show -->
-        <!-- NOTE This may prevent gazebo from working with this model -->
+        -->
 
-<!--
-	  <joint name="left_wheel_joint" type="fixed">
+<!--	  <joint name="left_wheel_joint" type="fixed">
 	    <origin xyz="0 0.01905 0" rpy="0 0 0"/>
 	    <parent link="left_axle_link"/>
 	    <child link="left_wheel_link"/>
@@ -249,10 +247,9 @@
 	      </geometry>
 	    </collision>
 	  </link>
-	
+	-->
         <!-- Fixed because we never rotate it anyway, it is just for show -->
         <!-- NOTE This may prevent gazebo from working with this model -->
-
 <!--	  <joint name="right_wheel_joint" type="fixed">
 	    <origin xyz="0 -0.01905 0" rpy="0 0 0"/>
 	    <parent link="right_axle_link"/>
