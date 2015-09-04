@@ -26,7 +26,7 @@
 
 
   <node name="launchpad_node" pkg="chefbot_bringup" type="launchpad_node.py">
-    <rosparam file="$(find chefbot_bringup)/param/serial.yaml" command="load" />
+    <rosparam file="$(find chefbot_bringup)/param/ardros.yaml" command="load" />
   </node>
 
 

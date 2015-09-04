@@ -5,8 +5,8 @@ project(chefbot_gazebo)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-#  chefbot_bringup
-#  chefbot_description
+  chefbot_bringup
+  chefbot_description
   depthimage_to_laserscan
   diagnostic_aggregator
   gazebo_ros
