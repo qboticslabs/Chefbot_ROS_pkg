@@ -112,16 +112,16 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-# add_executable(chefbot_bringup_node src/chefbot_bringup_node.cpp)
+add_executable(send_goal src/send_robot_goal.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(chefbot_bringup_node chefbot_bringup_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(chefbot_bringup_node
-#   ${catkin_LIBRARIES}
-# )
+ target_link_libraries(send_goal
+   ${catkin_LIBRARIES}
+ )
 
 #############
 ## Install ##

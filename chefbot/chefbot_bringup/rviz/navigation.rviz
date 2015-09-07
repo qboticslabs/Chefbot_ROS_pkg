@@ -12,7 +12,7 @@ Panels:
         - /Local Map1/Costmap1
         - /Local Map1/Planner1
       Splitter Ratio: 0.5
-    Tree Height: 531
+    Tree Height: 503
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -30,7 +30,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Visualization Manager:
   Class: ""
   Displays:
@@ -66,13 +66,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        battery_box:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -98,71 +92,42 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        front_caster:
+        chefbot_caster_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        ir_sensor_array:
+        chefbot_caster_front_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        left_axle_link:
+        chefbot_wheel_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        left_wheel_link:
+        chefbot_wheel_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        ping_sensor_array:
+        cliff_sensor_front_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        plate_0_link:
+        cliff_sensor_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        rear_caster:
+        cliff_sensor_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        right_axle_link:
+        gyro_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        right_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        standoff_5in_0_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        standoff_5in_1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        standoff_5in_2_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        standoff_5in_3_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -264,7 +229,13 @@ Visualization Manager:
           Class: rviz/Path
           Color: 255; 0; 0
           Enabled: true
+          Line Style: Lines
+          Line Width: 0.03
           Name: Planner
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
           Topic: /move_base/TrajectoryPlannerROS/global_plan
           Value: true
       Enabled: true
@@ -284,7 +255,13 @@ Visualization Manager:
           Class: rviz/Path
           Color: 0; 12; 255
           Enabled: true
+          Line Style: Lines
+          Line Width: 0.03
           Name: Planner
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
           Topic: /move_base/TrajectoryPlannerROS/local_plan
           Value: true
       Enabled: true
@@ -295,6 +272,69 @@ Visualization Manager:
       Enabled: true
       Name: Amcl Particles
       Topic: /particlecloud
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 255; 0; 0
+      Enabled: true
+      Line Style: Billboards
+      Line Width: 0.03
+      Name: Global_plan
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Topic: /move_base/DWAPlannerROS/global_plan
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 255; 0; 0
+      Enabled: true
+      Line Style: Billboards
+      Line Width: 0.03
+      Name: local_plan
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Topic: /move_base/DWAPlannerROS/local_plan
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Line Style: Billboards
+      Line Width: 0.03
+      Name: planner_path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Topic: /move_base/NavfnROS/plan
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.1
+      Class: rviz/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.3
+      Head Radius: 0.1
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05
+      Shape: Arrow
+      Topic: /move_base/current_goal
+      Value: true
+    - Alpha: 1
+      Class: rviz/Polygon
+      Color: 25; 255; 0
+      Enabled: true
+      Name: robot_footprint
+      Topic: /move_base/global_costmap/obstacle_layer_footprint/footprint_stamped
       Value: true
   Enabled: true
   Global Options:
@@ -324,19 +364,19 @@ Visualization Manager:
         Value: false
       Name: Current View
       Near Clip Distance: 0.01
-      Scale: 93.0272
+      Scale: 62.4982
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz)
-      X: 0.385797
-      Y: -0.306823
+      X: -1.41356
+      Y: -0.169916
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 744
+  Height: 716
   Hide Left Dock: false
-  Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001e5000002a2fc0200000005fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000002a2000000dd00ffffff000000010000010f000002a2fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730100000028000002a2000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a0000002f600fffffffb0000000800540069006d0065010000000000000450000000000000000000000225000002a200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd00000004000000000000014900000286fc0200000005fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000002800000286000000dd00ffffff000000010000010f00000286fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000002800000286000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a0000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000003d60000028600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -344,7 +384,7 @@ Window Geometry:
   Tool Properties:
     collapsed: false
   Views:
-    collapsed: false
+    collapsed: true
   Width: 1317
-  X: 49
-  Y: 24
+  X: 39
+  Y: 14
