@@ -129,6 +129,7 @@ class DiffTf:
             self.then = now
             elapsed = elapsed.to_sec()
             
+
             # calculate odometry
             if self.enc_left == None:
                 d_left = 0
@@ -147,6 +148,7 @@ class DiffTf:
             self.dx = d / elapsed
             self.dr = th / elapsed
            
+
              
             if (d != 0):
                 # calculate distance traveled in x and y
@@ -199,6 +201,8 @@ class DiffTf:
             self.lmult = self.lmult - 1
             
         self.left = 1.0 * (enc + self.lmult * (self.encoder_max - self.encoder_min)) 
+
+
         self.prev_lencoder = enc
         
     #############################################################################
@@ -212,6 +216,8 @@ class DiffTf:
             self.rmult = self.rmult - 1
             
         self.right = 1.0 * (enc + self.rmult * (self.encoder_max - self.encoder_min))
+
+
         self.prev_rencoder = enc
 
 #############################################################################
