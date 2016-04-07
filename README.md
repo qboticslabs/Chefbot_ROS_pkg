@@ -4,6 +4,12 @@
 ![book_cover](http://learn-robotics.com/images/section-image-1.jpg
  "Learning Robotics using Python")
 
+### Buy book
+
+* [PACKT] (https://www.packtpub.com/application-development/learning-robotics-using-python)
+* [Amazon.com](http://amzn.com/1783287535)
+* [Amazon.in](http://www.amazon.in/dp/B00YEVZ6UK)
+
 ### Author
 
 * [Lentin Joseph](https://in.linkedin.com/in/lentinjoseph)
