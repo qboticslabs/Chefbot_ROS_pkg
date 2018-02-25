@@ -41,7 +41,7 @@ class TwistToMotors():
     
         self.pub_lmotor = rospy.Publisher('lwheel_vtarget', Float32,queue_size=10)
         self.pub_rmotor = rospy.Publisher('rwheel_vtarget', Float32,queue_size=10)
-        rospy.Subscriber('cmd_vel_mux/input/teleop', Twist, self.twistCallback)
+        rospy.Subscriber('cmd_vel', Twist, self.twistCallback)
     
     
         self.rate = rospy.get_param("~rate", 50)
